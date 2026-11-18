@@ -50,7 +50,7 @@ shared across the whole day:
 
 The fit is ordinary least squares solved by Gaussian elimination on
 the 6×6 normal equations (standard library only), over comparables
-whose hour 1 was already a real launch hour (hour-1 viewers ≥ 20,000,
+whose hour 1 was already a real launch hour (hour-1 viewers ≥ 10,000,
 relaxed to ≥ 5,000 then ≥ 100 if too few qualify). The target game's
 own pre-release category history (the "Grand Theft Auto VI"
 comparable, whose day is the 2026-08-27 premiere, not a launch) is
@@ -71,7 +71,7 @@ loss on log scale:
 
 | set | this model | house persistence baseline |
 | --- | --- | --- |
-| all 37 usable comparables (× 4 practice cases) | **0.634** | 0.930 |
+| all 37 usable comparables (× 4 practice cases) | **0.596** | 0.930 |
 
 Local checks on the kit's four practice cases: outputs valid (23 rows,
 five non-decreasing quantiles each), byte-identical across two runs,

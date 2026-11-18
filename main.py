@@ -27,7 +27,7 @@ shared across the whole day:
 The fit is ordinary least squares solved by Gaussian elimination on
 the 6x6 normal equations (standard library only), over comparables
 whose hour 1 was already a real launch hour (hour-1 viewers >=
-20,000, relaxed to >= 5,000 then >= 100 if too few qualify). The
+10,000, relaxed to >= 5,000 then >= 100 if too few qualify). The
 target game's own pre-release category history ("Grand Theft Auto
 VI", day_start 2026-08-27, a premiere not a launch) is excluded.
 
@@ -112,7 +112,7 @@ def _training_set(case):
         parsed = _release_day_rows(comp)
         if parsed is not None:
             rows.append(parsed)
-    for threshold in (20000.0, 5000.0, 100.0):
+    for threshold in (10000.0, 5000.0, 100.0):
         kept = [r for r in rows if r[0] >= threshold]
         if len(kept) >= MIN_TRAIN:
             return kept
